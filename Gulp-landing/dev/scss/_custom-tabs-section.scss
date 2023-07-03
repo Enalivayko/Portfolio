@@ -1,0 +1,105 @@
+#consistent:checked ~ .show-first,
+#customer-oriented:checked ~ .show-second,
+#innovative:checked ~ .show-third,
+#business-oriented:checked ~ .show-fourth {
+    display: block;
+}
+
+#consistent:checked ~ ul li label[for="consistent"],
+#customer-oriented:checked ~ ul li label[for="customer-oriented"],
+#innovative:checked ~ ul li label[for="innovative"],
+#business-oriented:checked ~ ul li label[for="business-oriented"] {
+    @extend %gradient-text;
+}
+
+.scroll-switcher {
+    margin: 30px 0px;
+
+    @media (min-width: $tablet-min-width) {
+        margin: 60px 0px;
+    }
+
+    &__info {
+        display: none;
+        transition: all .3s;
+
+        @media (min-width: $desktop-min-width) {
+            order: 3;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        overflow-x: scroll;
+        margin: 0px -30px 30px;
+        white-space: nowrap;
+
+        @media (min-width: $tablet-min-width) {
+            margin: 0px -60px 60px;
+        }
+
+        @media (min-width: $desktop-min-width) {
+            margin: 0px 0px 60px 0px;
+            overflow-x: unset;
+            flex-direction: column;
+            align-items: flex-end;
+            order: 1;
+            margin: 0;
+            row-gap: 30px;
+        }
+    }
+    
+    &__item {
+        font-weight: 700;
+        color: $clr-item_tab;
+        font-size: 30px;
+        padding: 0 30px 30px 0;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $clr-hover-effect;
+        }
+
+        label {
+            cursor: pointer;
+        }
+        
+        @media (min-width: $tablet-min-width) {
+            font-size: 38px;
+            padding: 0 30px 60px 0;
+        }
+
+        @media (min-width: $desktop-min-width) {
+            padding: 0;
+        }
+    }
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $clr-white;
+    margin-bottom: 30px;
+
+    @media (min-width: $tablet-min-width) {
+        font-size: 30px;
+    }
+    
+    @media (min-width: $desktop-min-width) {
+        line-height: 37px;
+    }
+}
+
+.p-wrapper {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 30px;
+    color: $clr-white;
+
+    &--fix {
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 15px;
+    }
+}

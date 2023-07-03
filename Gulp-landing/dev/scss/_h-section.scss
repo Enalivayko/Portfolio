@@ -1,0 +1,36 @@
+.h-section {
+    text-align: center;
+    width: $full-width;
+    position: relative;
+
+    &__set {
+        position: relative;
+        min-width: $h_set-size-mobile;
+        display: block;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%,0%);
+
+        @media (min-width: $tablet-min-width) {
+            min-width: $h_set-size-tablet;
+        }
+        @media (min-width: $desktop-min-width) {
+            min-width: $h_set-size-desktop;
+        }
+        @media (min-width: $hd-desktop-min-width) {
+            min-width: $h_set-size-hd_desktop;
+        }
+    }
+}
+
+.title {
+    position: absolute;
+    width: $full-width;
+    padding: 0 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 38px;
+    color: $clr-white;
+}

@@ -1,0 +1,126 @@
+.companies-section {
+    padding-top: 60px;
+
+    &--services {
+        padding-top: 80px;
+    }
+
+    @media (min-width: $max-width-container) {
+        padding-bottom: 30px;
+    }
+
+    &__subtitle {
+        text-align: center;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $clr-subtitle-companies;
+        margin-bottom: 30px;
+    }
+}
+
+.companies-block {
+    display: grid;
+    margin: 0px -30px;
+    grid-template-rows: repeat(6, 120px);
+    overflow: hidden;
+    
+    @media (min-width: $tablet-min-width) {
+        margin: 0px -60px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 120px);
+    }
+
+    @media (min-width: $desktop-min-width) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 120px);
+    }
+
+    @media (min-width: $max-width-container) {
+        border-radius: 12px;
+    }
+
+    &__element {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(10),
+        &:nth-child(11),
+        &:nth-child(12) {
+            display: none;
+        }
+
+        @media (min-width: $tablet-min-width) {
+            &:nth-child(7),
+            &:nth-child(8),
+            &:nth-child(9),
+            &:nth-child(10),
+            &:nth-child(11),
+            &:nth-child(12) {
+                display: flex;
+            }
+        }
+
+        & a img {
+            transition: .3s;
+        }
+        
+        & a img:hover {
+            transform: scale(1.05);
+        }
+
+        &--bg-hillel {
+            background: #1C4280;
+        }
+
+        &--bg-wannabiz {
+            background: #143646;
+        }
+
+        &--bg-tapgerine {
+            background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+        }
+
+        &--bg-3dlook {
+            background: #9E4DC3;
+        }
+
+        &--bg-arangear {
+            background: #FD9339;
+        }
+
+        &--bg-adtelligent {
+            background: #E2E2E4;
+        }
+
+        &--bg-clicky {
+            background: #C71C36;
+        }
+
+        &--bg-ecoleasing {
+            background: #DCF3F9;
+        }
+
+        &--bg-infratek {
+            background: #EAEAEA;
+        }
+
+        &--bg-citypark {
+            background: #282240;
+        }
+
+        &--bg-artprint {
+            background: #1D4568;
+        }
+
+        &--bg-ultimatecard {
+            background: black;
+        }
+    }
+}

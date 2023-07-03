@@ -1,0 +1,206 @@
+.header {
+    position: absolute;
+    width: $full-width;
+    color: $clr-white;
+    font-weight: 700;
+    z-index: 1;
+    padding-top: 60px;
+
+    @media (min-width: tablet-min-width) {
+        padding: 50px 0 0;
+    }
+
+    &__logo {
+
+        @media (min-width: $desktop-min-width) {
+            position: absolute;
+            top: 0%;
+            left: 60px;
+            padding-top: 0;
+        }
+    }
+
+    &__menu {
+
+        @media (min-width: $tablet-min-width) {
+            display: flex;
+        }
+    }
+
+    &__menu-label{
+
+        @media (min-width: $tablet-min-width) {
+            display: none;
+        }
+    }
+}
+
+.logo-link {
+    display: block;
+
+    img {
+        height: 50px;
+
+        @media (min-width: $tablet-min-width) {
+            height: unset;
+        }
+    }
+}
+
+.phone-number {
+    transition: all .3s;
+
+    &:hover {
+        color: $clr-hover-effect;
+    }
+}
+
+.contacts {
+    background: rgba(245, 245, 250, 0.2);
+    margin: 0 -30px;
+    padding: 12.5px 20px;
+    position: absolute;
+    top: 0%;
+    width: $full-width;
+
+    @media (min-width: $tablet-min-width) {
+        width: auto;
+        position: static;
+        background: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.contacts-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -3px;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-min-width) {
+        justify-content: flex-start;
+    }
+
+    &__element {
+        padding: 0 3px;
+        display: flex;
+        align-items: center;
+
+        &:nth-child(even) {
+            display: none;
+        }
+
+        @media (min-width: $tablet-min-width) {
+            &:nth-child(even) {
+                display: flex;
+            }
+        }
+    }
+}
+
+.address {
+    font-weight: 400;
+    font-style: normal;
+}
+
+.separator {
+
+    &::before {
+        content: '';
+        display: block;
+        width: $separator-size;
+        height: $separator-size;
+        background-color: $clr-white;
+        border-radius: 50%;
+        margin-right: 6px;
+    }
+
+    &--footer::before {
+        content: '';
+        display: block;
+        width: $separator-size;
+        height: $separator-size;
+        background: $bg-footer-separator;
+        border-radius: 50%;
+        margin: 0px 10px;
+        display: none;
+
+        @media (min-width: $tablet-min-width) {
+            display: block;
+        }
+    }
+    
+    &--after::after {
+        content: '';
+        display: block;
+        width: $separator-size;
+        height: $separator-size;
+        background-color: $clr-white;
+        border-radius: 50%;
+        margin-left: 6px;
+    }
+}
+
+.lang {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.language {
+    padding: 5px 7px;
+    border-radius: 8px;
+    transition: background .3s;
+
+    &--active{
+        background: $clr-hover-effect;
+    }
+
+    &:hover {
+        background: $clr-hover-effect;
+    }
+}
+
+.fb-logo {
+    font-family: 'icomoon';
+    font-size: 24px;
+    color: $clr-white;
+    transition: color .3s;
+
+    &:hover {
+        color: $clr-hover-effect;
+    }
+
+    &::before {
+        content: '\e905';
+    }
+
+    &--footer {
+        color: #24A3FF;
+        font-size: 38px;
+        margin-bottom: 10px;
+
+        @media (min-width: $tablet-min-width) {
+            margin: 0;
+        }
+    }
+}
+
+.scroll {
+    position: absolute;
+    width: $scroll-size;
+    height: $scroll-size;
+    bottom: 30px;
+    stroke: $clr-white;
+    fill: none;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: stroke .3s;
+    cursor: pointer;
+
+    &:hover {
+        stroke: $clr-hover-effect;
+    }
+}
