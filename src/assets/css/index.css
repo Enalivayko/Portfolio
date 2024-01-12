@@ -1,0 +1,8 @@
+@import url("./fonts.css");
+html{
+    overflow: hidden;
+}
+body{
+    font-family: 'RobotoRegular',sans-serif;
+    margin: 0;
+}
